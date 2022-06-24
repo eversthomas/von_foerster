@@ -1,5 +1,5 @@
 # von_foerster
-a nearly barebones wordpress block theme (fse) blank theme
+a nearly barebones wordpress blank block theme (fse)
 
 ## sass
 
