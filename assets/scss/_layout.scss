@@ -1,0 +1,24 @@
+// site
+
+// header
+header {
+    background: $header-bg;
+}
+
+// main
+main {
+    background: $main-bg;
+}
+
+// sidebar
+aside {
+    background: $aside-bg;
+}
+
+// footer
+footer {
+    h3 {
+        color: $secondary;
+    }
+    background: $footer-bg;
+}

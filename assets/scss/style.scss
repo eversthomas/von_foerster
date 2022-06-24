@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*
+Theme Name: von_foerster
+Theme URI: https://
+Author: te
+Author URI: https://tomevers.de/
+Description: von_foerster is a simple theme that supports full-site editing. It comes with a set of minimal templates and design settings. Use it to build something beautiful.
+Requires at least: 5.8
+Tested up to: 6.0
+Requires PHP: 5.7
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: von_foerster
+Tags: custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, theme-options, threaded-comments, translation-ready, wide-blocks, auto-loading-homepage
+*/
+
+/* config */
+
+$header-bg: #eeeeee;
+$main-bg: #ffffff;
+$aside-bg: yellow;
+$footer-bg: #444444;
+
+$link: #2980b9;
+$link-hover: #3498db;
+
+$primary: #444444;
+$secondary: silver;
+
+/* imports */
+
+@import 'reset';
+@import 'fonts';
+@import 'typography';
+@import 'layout';
