@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "templateParts": [
+      {
+        "name": "header",
+        "title": "Header",
+        "area": "header"
+      },
+      {
+        "name": "sidebar",
+        "title": "Sidebar",
+        "area": "sidebar"
+      },
+      {
+        "name": "footer",
+        "title": "Footer",
+        "area": "footer"
+      }
+    ],
+    "spacing": {
+        "units": [
+          "%",
+          "px",
+          "em",
+          "rem",
+          "vh",
+          "vw"
+        ]
+      },
+}
