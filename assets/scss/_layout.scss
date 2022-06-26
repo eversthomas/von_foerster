@@ -1,5 +1,12 @@
 // site
 
+.site-header,
+.site-content,
+.sidebar,
+.site-footer {
+    padding: 1rem;
+}
+
 // header
 header {
     background: $header-bg;
