@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/*
+Theme Name: von_foerster
+Theme URI: https://tevers.de/
+Author: Thomas Evers
+Author URI: https://tevers.de/
+Description: Ein minimalistisches, semantisch sauberes WordPress-Theme als CMF-Basis – ohne Standard-WordPress-Klassen, Hooks oder Automatismen.
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: von_foerster
+Tags: clean, minimal, semantic, custom-head, no-bloat, no-gutenberg
+*/
+/* === Reset & Basisstruktur === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 100%/1.6 system-ui, sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #0073aa;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  appearance: none;
+}
+/* === Grundstruktur und Layout === */
+body {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+main, #header, footer, section, article, aside, nav {
+  padding: 1rem;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+ul, ol {
+  padding-left: 1.5rem;
+}
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+/* typography */
+/* nunito-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/nunito-sans-v15-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/nunito-sans-v15-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/nunito-sans-v15-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("fonts/nunito-sans-v15-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+/* Typografie */
+/* === Typografie === */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1.5rem 0 1rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+p {
+  margin: 0 0 1rem;
+}
+strong {
+  font-weight: bold;
+}
+/* navigationen und Links */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.nav.is-collapsed {
+  display: none;
+}
+@media (min-width: 768px) {
+  .nav.is-collapsed {
+    display: block;
+  }
+}
+.nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .nav .nav-list {
+    flex-direction: row;
+  }
+}
+.nav .nav-list li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.nav .nav-list li a:hover, .nav .nav-list li a:focus {
+  background: #f0f0f0;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+/* Layoutstruktur */
+#content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header-inner, .footer-inner {
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem;
+}
+#content {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  #content {
+    display: flex;
+    justify-content: space-between;
+  }
+  #content main {
+    width: 65%;
+  }
+  #content aside {
+    width: 25%;
+  }
+}
+/* === Komponenten === */
+/* Pagination */
+.pagination ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+.pagination li {
+  margin: 0;
+}
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+}
+/* Kommentare */
+.comments-section {
+  margin-top: 2rem;
+}
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.comment-form button {
+  background: #0073aa;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

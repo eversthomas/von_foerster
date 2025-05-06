@@ -1,0 +1,55 @@
+/* === Komponenten === */
+
+/* Pagination */
+.pagination ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    background: #000;
+    color: #fff;
+  }
+}
+
+/* Kommentare */
+.comments-section {
+  margin-top: 2rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.comment-form button {
+  background: #0073aa;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+/* Layoutstruktur */
+#content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Allgemeine Layout-Wrapper für Strukturblöcke
+.header-inner,
+.footer-inner {
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem;
+}
+
+
+#content {
+	display: block;
+    
+    @media screen and (min-width: 768px) {
+    	display: flex;
+        justify-content: space-between;
+        
+        main {
+        	width: 65%;
+        }
+        
+        aside {
+        	width: 25%;
+        }
+    }
+}

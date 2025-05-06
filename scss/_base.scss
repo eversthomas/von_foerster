@@ -1,0 +1,32 @@
+/* === Grundstruktur und Layout === */
+
+body {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+main, #header, footer, section, article, aside, nav {
+  padding: 1rem;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}

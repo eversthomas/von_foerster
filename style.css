@@ -1,0 +1,14 @@
+/*
+Theme Name: von_foerster
+Theme URI: https://tevers.de/
+Author: Thomas Evers
+Author URI: https://tevers.de/
+Description: Ein minimalistisches, semantisch sauberes WordPress-Theme als CMF-Basis – ohne Standard-WordPress-Klassen, Hooks oder Automatismen.
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: von_foerster
+Tags: clean, minimal, semantic, custom-head, no-bloat, no-gutenberg
+*/
+
+/* Diese Datei dient nur zur Theme-Registrierung. Alle Styles werden per SASS organisiert und eingebunden. */
