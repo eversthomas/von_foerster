@@ -147,6 +147,28 @@ function zeige_module($args = []) {
     }
 }
 
+// 5. Shortcode zur Modul-Ausgabe mit Kategorieangabe
+add_shortcode('module', function($atts) {
+    $atts = shortcode_atts([
+        'kategorie' => ''
+    ], $atts, 'module');
+
+    $args = [];
+    if (!empty($atts['kategorie'])) {
+        $args['tax_query'] = [
+            [
+                'taxonomy' => 'modulkategorie',
+                'field' => 'slug',
+                'terms' => sanitize_title($atts['kategorie']),
+            ]
+        ];
+    }
+
+    ob_start();
+    zeige_module($args);
+    return ob_get_clean();
+});
+
 /* usecase
   <div class="module">
     	<?php
@@ -161,4 +183,6 @@ function zeige_module($args = []) {
             ]);
         ?>
     </div>
+
+    or with shortcode: [module kategorie="startseite"]
 */
