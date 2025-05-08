@@ -28,3 +28,6 @@ require_once get_template_directory() . '/inc/_helpers.php';
 
 // ▸ Sitemap-Ausgabe unter /sitemap.xml
 require_once get_template_directory() . '/inc/_sitemap.php';
+
+// ▸ Module- Card-Builder
+require_once get_template_directory() . '/inc/_module-builder.php';
